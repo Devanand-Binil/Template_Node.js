@@ -53,7 +53,7 @@ Setup the `.env` file in the root directory with your credentials from Neon, and
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Devanand-Binil/Template_Node.js.git
+git clone https://github.com/Devanand-Binil/Template_Node.js.git backend
 cd Template_Node.js
 ```
 
