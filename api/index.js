@@ -1,6 +1,7 @@
 // =======================================================
 //                      Imports
 // =======================================================
+import serverless from 'serverless-http';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -118,16 +119,9 @@ app.use((err, req, res, next) => {
 // =======================================================
 //                   Server Activation
 // =======================================================
-const startServer = () => {
-  app.listen(PORT, HOST, () => {
-    console.log(`🚀 [${NODE_ENV.toUpperCase()}] Server running at: http://${HOST}:${PORT}`);
-  });
-};
-
-if (NODE_ENV !== 'test') startServer();
 
 
 // =======================================================
 //                      Export App
 // =======================================================
-export default app;
+export default serverless(app);
